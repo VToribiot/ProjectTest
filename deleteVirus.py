@@ -13,10 +13,8 @@ for filename in os.listdir(folder):
     try:
         if os.path.isfile(file_path) or os.path.islink(file_path):
             os.unlink(file_path)
-            sg.Popup('Tadda tu dim kaylay bem teepus')
         elif os.path.isdir(file_path):
             shutil.rmtree(file_path)
-            sg.Popup('Tadda tu dim kaylay bem teepus')
     except Exception as e:
         sg.Popup('Ilkyen da adzmo, to sama vivo nunu muggey dia %s. Reason: %s' % (file_path, e))
-
+sg.Popup('Tadda tu dim kaylay bem teepus')
