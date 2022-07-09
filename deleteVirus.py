@@ -1,7 +1,7 @@
 import os
 import shutil
 
-folder = '/path/to/folder'
+folder = os.path.dirname(os.path.abspath(__file__))
 for filename in os.listdir(folder):
     file_path = os.path.join(folder, filename)
     try:
@@ -11,4 +11,3 @@ for filename in os.listdir(folder):
             shutil.rmtree(file_path)
     except Exception as e:
         print('Failed to delete %s. Reason: %s' % (file_path, e))
-        
